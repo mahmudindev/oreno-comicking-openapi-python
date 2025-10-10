@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_at** | **datetime** |  | 
-**updated_at** | **datetime** |  | [optional] 
+**updated_at** | **datetime** |  | 
 **category_type_code** | **str** |  | 
 **category_code** | **str** |  | 
 

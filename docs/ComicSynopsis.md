@@ -6,11 +6,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_at** | **datetime** |  | 
-**updated_at** | **datetime** |  | [optional] 
+**updated_at** | **datetime** |  | 
 **ulid** | **str** |  | 
 **language_lang** | **str** |  | 
 **content** | **str** |  | 
-**source** | **str** |  | [optional] 
+**source** | **str** |  | 
 
 ## Example
 

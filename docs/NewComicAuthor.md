@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type_code** | **str** |  | 
+**position_code** | **str** |  | 
 **person_code** | **str** |  | 
 
 ## Example

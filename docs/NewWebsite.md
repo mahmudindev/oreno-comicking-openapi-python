@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **host** | **str** |  | 
-**name** | **str** |  | 
+**name** | **str** |  | [optional] 
 
 ## Example
 

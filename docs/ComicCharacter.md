@@ -6,9 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_at** | **datetime** |  | 
-**updated_at** | **datetime** |  | [optional] 
+**updated_at** | **datetime** |  | 
 **character_code** | **str** |  | 
-**is_main** | **bool** |  | [optional] 
+**is_main** | **bool** |  | 
 
 ## Example
 

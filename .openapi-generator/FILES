@@ -11,6 +11,7 @@ comicking_openapi/api/character_api.py
 comicking_openapi/api/comic_api.py
 comicking_openapi/api/comic_chapter_api.py
 comicking_openapi/api/comic_volume_api.py
+comicking_openapi/api/image_api.py
 comicking_openapi/api/language_api.py
 comicking_openapi/api/link_api.py
 comicking_openapi/api/magazine_api.py
@@ -26,7 +27,6 @@ comicking_openapi/models/category.py
 comicking_openapi/models/character.py
 comicking_openapi/models/comic.py
 comicking_openapi/models/comic_author.py
-comicking_openapi/models/comic_author_note.py
 comicking_openapi/models/comic_category.py
 comicking_openapi/models/comic_chapter.py
 comicking_openapi/models/comic_chapter_title.py
@@ -43,6 +43,7 @@ comicking_openapi/models/comic_volume_cover.py
 comicking_openapi/models/comic_volume_title.py
 comicking_openapi/models/error.py
 comicking_openapi/models/generic_type.py
+comicking_openapi/models/image.py
 comicking_openapi/models/language.py
 comicking_openapi/models/link.py
 comicking_openapi/models/magazine.py
@@ -50,7 +51,6 @@ comicking_openapi/models/new_category.py
 comicking_openapi/models/new_character.py
 comicking_openapi/models/new_comic.py
 comicking_openapi/models/new_comic_author.py
-comicking_openapi/models/new_comic_author_note.py
 comicking_openapi/models/new_comic_category.py
 comicking_openapi/models/new_comic_chapter.py
 comicking_openapi/models/new_comic_chapter_title.py
@@ -66,6 +66,7 @@ comicking_openapi/models/new_comic_volume.py
 comicking_openapi/models/new_comic_volume_cover.py
 comicking_openapi/models/new_comic_volume_title.py
 comicking_openapi/models/new_generic_type.py
+comicking_openapi/models/new_image.py
 comicking_openapi/models/new_language.py
 comicking_openapi/models/new_link.py
 comicking_openapi/models/new_magazine.py
@@ -77,7 +78,6 @@ comicking_openapi/models/set_category.py
 comicking_openapi/models/set_character.py
 comicking_openapi/models/set_comic.py
 comicking_openapi/models/set_comic_author.py
-comicking_openapi/models/set_comic_author_note.py
 comicking_openapi/models/set_comic_category.py
 comicking_openapi/models/set_comic_chapter.py
 comicking_openapi/models/set_comic_chapter_title.py
@@ -93,6 +93,7 @@ comicking_openapi/models/set_comic_volume.py
 comicking_openapi/models/set_comic_volume_cover.py
 comicking_openapi/models/set_comic_volume_title.py
 comicking_openapi/models/set_generic_type.py
+comicking_openapi/models/set_image.py
 comicking_openapi/models/set_language.py
 comicking_openapi/models/set_link.py
 comicking_openapi/models/set_magazine.py
@@ -110,7 +111,6 @@ docs/CharacterApi.md
 docs/Comic.md
 docs/ComicApi.md
 docs/ComicAuthor.md
-docs/ComicAuthorNote.md
 docs/ComicCategory.md
 docs/ComicChapter.md
 docs/ComicChapterApi.md
@@ -129,6 +129,8 @@ docs/ComicVolumeCover.md
 docs/ComicVolumeTitle.md
 docs/Error.md
 docs/GenericType.md
+docs/Image.md
+docs/ImageApi.md
 docs/Language.md
 docs/LanguageApi.md
 docs/Link.md
@@ -139,7 +141,6 @@ docs/NewCategory.md
 docs/NewCharacter.md
 docs/NewComic.md
 docs/NewComicAuthor.md
-docs/NewComicAuthorNote.md
 docs/NewComicCategory.md
 docs/NewComicChapter.md
 docs/NewComicChapterTitle.md
@@ -155,6 +156,7 @@ docs/NewComicVolume.md
 docs/NewComicVolumeCover.md
 docs/NewComicVolumeTitle.md
 docs/NewGenericType.md
+docs/NewImage.md
 docs/NewLanguage.md
 docs/NewLink.md
 docs/NewMagazine.md
@@ -167,7 +169,6 @@ docs/SetCategory.md
 docs/SetCharacter.md
 docs/SetComic.md
 docs/SetComicAuthor.md
-docs/SetComicAuthorNote.md
 docs/SetComicCategory.md
 docs/SetComicChapter.md
 docs/SetComicChapterTitle.md
@@ -183,6 +184,7 @@ docs/SetComicVolume.md
 docs/SetComicVolumeCover.md
 docs/SetComicVolumeTitle.md
 docs/SetGenericType.md
+docs/SetImage.md
 docs/SetLanguage.md
 docs/SetLink.md
 docs/SetMagazine.md
@@ -207,7 +209,6 @@ test/test_character_api.py
 test/test_comic.py
 test/test_comic_api.py
 test/test_comic_author.py
-test/test_comic_author_note.py
 test/test_comic_category.py
 test/test_comic_chapter.py
 test/test_comic_chapter_api.py
@@ -226,6 +227,8 @@ test/test_comic_volume_cover.py
 test/test_comic_volume_title.py
 test/test_error.py
 test/test_generic_type.py
+test/test_image.py
+test/test_image_api.py
 test/test_language.py
 test/test_language_api.py
 test/test_link.py
@@ -236,7 +239,6 @@ test/test_new_category.py
 test/test_new_character.py
 test/test_new_comic.py
 test/test_new_comic_author.py
-test/test_new_comic_author_note.py
 test/test_new_comic_category.py
 test/test_new_comic_chapter.py
 test/test_new_comic_chapter_title.py
@@ -252,6 +254,7 @@ test/test_new_comic_volume.py
 test/test_new_comic_volume_cover.py
 test/test_new_comic_volume_title.py
 test/test_new_generic_type.py
+test/test_new_image.py
 test/test_new_language.py
 test/test_new_link.py
 test/test_new_magazine.py
@@ -264,7 +267,6 @@ test/test_set_category.py
 test/test_set_character.py
 test/test_set_comic.py
 test/test_set_comic_author.py
-test/test_set_comic_author_note.py
 test/test_set_comic_category.py
 test/test_set_comic_chapter.py
 test/test_set_comic_chapter_title.py
@@ -280,6 +282,7 @@ test/test_set_comic_volume.py
 test/test_set_comic_volume_cover.py
 test/test_set_comic_volume_title.py
 test/test_set_generic_type.py
+test/test_set_image.py
 test/test_set_language.py
 test/test_set_link.py
 test/test_set_magazine.py

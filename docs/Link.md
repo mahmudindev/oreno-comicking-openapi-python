@@ -6,10 +6,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_at** | **datetime** |  | 
-**updated_at** | **datetime** |  | [optional] 
+**updated_at** | **datetime** |  | 
 **website_host** | **str** |  | 
 **website_name** | **str** |  | 
-**relative_reference** | **str** |  | [optional] 
+**relative_reference** | **str** |  | 
 
 ## Example
 

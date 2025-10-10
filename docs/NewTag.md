@@ -8,8 +8,6 @@ Name | Type | Description | Notes
 **type_code** | **str** |  | 
 **code** | **str** |  | 
 **name** | **str** |  | 
-**link_website_host** | **str** |  | [optional] 
-**link_relative_reference** | **str** |  | [optional] 
 
 ## Example
 
