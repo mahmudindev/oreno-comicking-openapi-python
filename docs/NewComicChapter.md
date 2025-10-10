@@ -8,8 +8,6 @@ Name | Type | Description | Notes
 **number** | **float** |  | 
 **version** | **str** |  | [optional] 
 **released_at** | **datetime** |  | [optional] 
-**thumbnail_link_website_host** | **str** |  | [optional] 
-**thumbnail_link_relative_reference** | **str** |  | [optional] 
 **volume_number** | **str** |  | [optional] 
 
 ## Example

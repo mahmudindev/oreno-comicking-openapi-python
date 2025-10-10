@@ -7,17 +7,17 @@ Method | HTTP request | Description
 [**add_comic_volume**](ComicVolumeApi.md#add_comic_volume) | **POST** /rest/comics/{comicCode}/volumes | Add comic volume.
 [**add_comic_volume_cover**](ComicVolumeApi.md#add_comic_volume_cover) | **POST** /rest/comics/{comicCode}/volumes/{volumeNumber}/covers | Add comic volume cover.
 [**add_comic_volume_title**](ComicVolumeApi.md#add_comic_volume_title) | **POST** /rest/comics/{comicCode}/volumes/{volumeNumber}/titles | Add comic volume title.
-[**delete_comic_volume**](ComicVolumeApi.md#delete_comic_volume) | **DELETE** /rest/comics/{comicCode}/volumes/{volume} | Delete comic volume.
-[**delete_comic_volume_cover**](ComicVolumeApi.md#delete_comic_volume_cover) | **DELETE** /rest/comics/{comicCode}/volumes/{volumeNumber}/covers/{ulid} | Delete comic volume cover.
+[**delete_comic_volume**](ComicVolumeApi.md#delete_comic_volume) | **DELETE** /rest/comics/{comicCode}/volumes/{number} | Delete comic volume.
+[**delete_comic_volume_cover**](ComicVolumeApi.md#delete_comic_volume_cover) | **DELETE** /rest/comics/{comicCode}/volumes/{volumeNumber}/covers/{imageULID} | Delete comic volume cover.
 [**delete_comic_volume_title**](ComicVolumeApi.md#delete_comic_volume_title) | **DELETE** /rest/comics/{comicCode}/volumes/{volumeNumber}/titles/{ulid} | Delete comic volume title.
-[**get_comic_volume**](ComicVolumeApi.md#get_comic_volume) | **GET** /rest/comics/{comicCode}/volumes/{volume} | Get comic volume.
-[**get_comic_volume_cover**](ComicVolumeApi.md#get_comic_volume_cover) | **GET** /rest/comics/{comicCode}/volumes/{volumeNumber}/covers/{ulid} | Get comic volume cover.
+[**get_comic_volume**](ComicVolumeApi.md#get_comic_volume) | **GET** /rest/comics/{comicCode}/volumes/{number} | Get comic volume.
+[**get_comic_volume_cover**](ComicVolumeApi.md#get_comic_volume_cover) | **GET** /rest/comics/{comicCode}/volumes/{volumeNumber}/covers/{imageULID} | Get comic volume cover.
 [**get_comic_volume_title**](ComicVolumeApi.md#get_comic_volume_title) | **GET** /rest/comics/{comicCode}/volumes/{volumeNumber}/titles/{ulid} | Get comic volume title.
 [**list_comic_volume**](ComicVolumeApi.md#list_comic_volume) | **GET** /rest/comics/{comicCode}/volumes | List comic volume.
 [**list_comic_volume_cover**](ComicVolumeApi.md#list_comic_volume_cover) | **GET** /rest/comics/{comicCode}/volumes/{volumeNumber}/covers | List comic volume cover.
 [**list_comic_volume_title**](ComicVolumeApi.md#list_comic_volume_title) | **GET** /rest/comics/{comicCode}/volumes/{volumeNumber}/titles | List comic volume title.
-[**update_comic_volume**](ComicVolumeApi.md#update_comic_volume) | **PATCH** /rest/comics/{comicCode}/volumes/{volume} | Update comic volume.
-[**update_comic_volume_cover**](ComicVolumeApi.md#update_comic_volume_cover) | **PATCH** /rest/comics/{comicCode}/volumes/{volumeNumber}/covers/{ulid} | Update volume comic cover.
+[**update_comic_volume**](ComicVolumeApi.md#update_comic_volume) | **PATCH** /rest/comics/{comicCode}/volumes/{number} | Update comic volume.
+[**update_comic_volume_cover**](ComicVolumeApi.md#update_comic_volume_cover) | **PATCH** /rest/comics/{comicCode}/volumes/{volumeNumber}/covers/{imageULID} | Update volume comic cover.
 [**update_comic_volume_title**](ComicVolumeApi.md#update_comic_volume_title) | **PATCH** /rest/comics/{comicCode}/volumes/{volumeNumber}/titles/{ulid} | Update comic volume title.
 
 
@@ -266,7 +266,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_comic_volume**
-> delete_comic_volume(comic_code, volume)
+> delete_comic_volume(comic_code, number)
 
 Delete comic volume.
 
@@ -300,11 +300,11 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comicking_openapi.ComicVolumeApi(api_client)
     comic_code = 'comic_code_example' # str | 
-    volume = 'volume_example' # str | 
+    number = 'number_example' # str | 
 
     try:
         # Delete comic volume.
-        api_instance.delete_comic_volume(comic_code, volume)
+        api_instance.delete_comic_volume(comic_code, number)
     except Exception as e:
         print("Exception when calling ComicVolumeApi->delete_comic_volume: %s\n" % e)
 ```
@@ -317,7 +317,7 @@ with comicking_openapi.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **comic_code** | **str**|  | 
- **volume** | **str**|  | 
+ **number** | **str**|  | 
 
 ### Return type
 
@@ -342,7 +342,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_comic_volume_cover**
-> delete_comic_volume_cover(comic_code, volume_number, ulid)
+> delete_comic_volume_cover(comic_code, volume_number, image_ulid)
 
 Delete comic volume cover.
 
@@ -377,11 +377,11 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     api_instance = comicking_openapi.ComicVolumeApi(api_client)
     comic_code = 'comic_code_example' # str | 
     volume_number = 'volume_number_example' # str | 
-    ulid = 'ulid_example' # str | 
+    image_ulid = 'image_ulid_example' # str | 
 
     try:
         # Delete comic volume cover.
-        api_instance.delete_comic_volume_cover(comic_code, volume_number, ulid)
+        api_instance.delete_comic_volume_cover(comic_code, volume_number, image_ulid)
     except Exception as e:
         print("Exception when calling ComicVolumeApi->delete_comic_volume_cover: %s\n" % e)
 ```
@@ -395,7 +395,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **comic_code** | **str**|  | 
  **volume_number** | **str**|  | 
- **ulid** | **str**|  | 
+ **image_ulid** | **str**|  | 
 
 ### Return type
 
@@ -498,7 +498,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_comic_volume**
-> ComicVolume get_comic_volume(comic_code, volume)
+> ComicVolume get_comic_volume(comic_code, number)
 
 Get comic volume.
 
@@ -523,11 +523,11 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comicking_openapi.ComicVolumeApi(api_client)
     comic_code = 'comic_code_example' # str | 
-    volume = 'volume_example' # str | 
+    number = 'number_example' # str | 
 
     try:
         # Get comic volume.
-        api_response = api_instance.get_comic_volume(comic_code, volume)
+        api_response = api_instance.get_comic_volume(comic_code, number)
         print("The response of ComicVolumeApi->get_comic_volume:\n")
         pprint(api_response)
     except Exception as e:
@@ -542,7 +542,7 @@ with comicking_openapi.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **comic_code** | **str**|  | 
- **volume** | **str**|  | 
+ **number** | **str**|  | 
 
 ### Return type
 
@@ -567,7 +567,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_comic_volume_cover**
-> ComicVolumeCover get_comic_volume_cover(comic_code, volume_number, ulid)
+> ComicVolumeCover get_comic_volume_cover(comic_code, volume_number, image_ulid)
 
 Get comic volume cover.
 
@@ -593,11 +593,11 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     api_instance = comicking_openapi.ComicVolumeApi(api_client)
     comic_code = 'comic_code_example' # str | 
     volume_number = 'volume_number_example' # str | 
-    ulid = 'ulid_example' # str | 
+    image_ulid = 'image_ulid_example' # str | 
 
     try:
         # Get comic volume cover.
-        api_response = api_instance.get_comic_volume_cover(comic_code, volume_number, ulid)
+        api_response = api_instance.get_comic_volume_cover(comic_code, volume_number, image_ulid)
         print("The response of ComicVolumeApi->get_comic_volume_cover:\n")
         pprint(api_response)
     except Exception as e:
@@ -613,7 +613,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **comic_code** | **str**|  | 
  **volume_number** | **str**|  | 
- **ulid** | **str**|  | 
+ **image_ulid** | **str**|  | 
 
 ### Return type
 
@@ -709,7 +709,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_comic_volume**
-> List[ComicVolume] list_comic_volume(comic_code, page=page, limit=limit, order=order, order_by=order_by, volume_volume=volume_volume)
+> List[ComicVolume] list_comic_volume(comic_code, page=page, limit=limit, order=order, order_by=order_by)
 
 List comic volume.
 
@@ -738,11 +738,10 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     limit = 56 # int |  (optional)
     order = 'order_example' # str |  (optional)
     order_by = ['order_by_example'] # List[str] |  (optional)
-    volume_volume = ['volume_volume_example'] # List[str] |  (optional)
 
     try:
         # List comic volume.
-        api_response = api_instance.list_comic_volume(comic_code, page=page, limit=limit, order=order, order_by=order_by, volume_volume=volume_volume)
+        api_response = api_instance.list_comic_volume(comic_code, page=page, limit=limit, order=order, order_by=order_by)
         print("The response of ComicVolumeApi->list_comic_volume:\n")
         pprint(api_response)
     except Exception as e:
@@ -761,7 +760,6 @@ Name | Type | Description  | Notes
  **limit** | **int**|  | [optional] 
  **order** | **str**|  | [optional] 
  **order_by** | [**List[str]**](str.md)|  | [optional] 
- **volume_volume** | [**List[str]**](str.md)|  | [optional] 
 
 ### Return type
 
@@ -786,7 +784,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_comic_volume_cover**
-> List[ComicVolumeCover] list_comic_volume_cover(comic_code, volume_number, page=page, limit=limit, order=order, order_by=order_by, link_website_host=link_website_host, link_relative_reference=link_relative_reference, link_href=link_href)
+> List[ComicVolumeCover] list_comic_volume_cover(comic_code, volume_number, page=page, limit=limit, order=order, order_by=order_by)
 
 List comic volume cover.
 
@@ -816,13 +814,10 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     limit = 56 # int |  (optional)
     order = 'order_example' # str |  (optional)
     order_by = ['order_by_example'] # List[str] |  (optional)
-    link_website_host = ['link_website_host_example'] # List[str] |  (optional)
-    link_relative_reference = ['link_relative_reference_example'] # List[str] |  (optional)
-    link_href = ['link_href_example'] # List[str] |  (optional)
 
     try:
         # List comic volume cover.
-        api_response = api_instance.list_comic_volume_cover(comic_code, volume_number, page=page, limit=limit, order=order, order_by=order_by, link_website_host=link_website_host, link_relative_reference=link_relative_reference, link_href=link_href)
+        api_response = api_instance.list_comic_volume_cover(comic_code, volume_number, page=page, limit=limit, order=order, order_by=order_by)
         print("The response of ComicVolumeApi->list_comic_volume_cover:\n")
         pprint(api_response)
     except Exception as e:
@@ -842,9 +837,6 @@ Name | Type | Description  | Notes
  **limit** | **int**|  | [optional] 
  **order** | **str**|  | [optional] 
  **order_by** | [**List[str]**](str.md)|  | [optional] 
- **link_website_host** | [**List[str]**](str.md)|  | [optional] 
- **link_relative_reference** | [**List[str]**](str.md)|  | [optional] 
- **link_href** | [**List[str]**](str.md)|  | [optional] 
 
 ### Return type
 
@@ -946,7 +938,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_comic_volume**
-> ComicVolume update_comic_volume(comic_code, volume, set_comic_volume)
+> ComicVolume update_comic_volume(comic_code, number, set_comic_volume)
 
 Update comic volume.
 
@@ -982,12 +974,12 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comicking_openapi.ComicVolumeApi(api_client)
     comic_code = 'comic_code_example' # str | 
-    volume = 'volume_example' # str | 
+    number = 'number_example' # str | 
     set_comic_volume = comicking_openapi.SetComicVolume() # SetComicVolume | 
 
     try:
         # Update comic volume.
-        api_response = api_instance.update_comic_volume(comic_code, volume, set_comic_volume)
+        api_response = api_instance.update_comic_volume(comic_code, number, set_comic_volume)
         print("The response of ComicVolumeApi->update_comic_volume:\n")
         pprint(api_response)
     except Exception as e:
@@ -1002,7 +994,7 @@ with comicking_openapi.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **comic_code** | **str**|  | 
- **volume** | **str**|  | 
+ **number** | **str**|  | 
  **set_comic_volume** | [**SetComicVolume**](SetComicVolume.md)|  | 
 
 ### Return type
@@ -1029,7 +1021,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_comic_volume_cover**
-> ComicVolumeCover update_comic_volume_cover(comic_code, volume_number, ulid, set_comic_volume_cover)
+> ComicVolumeCover update_comic_volume_cover(comic_code, volume_number, image_ulid, set_comic_volume_cover)
 
 Update volume comic cover.
 
@@ -1066,12 +1058,12 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     api_instance = comicking_openapi.ComicVolumeApi(api_client)
     comic_code = 'comic_code_example' # str | 
     volume_number = 'volume_number_example' # str | 
-    ulid = 'ulid_example' # str | 
+    image_ulid = 'image_ulid_example' # str | 
     set_comic_volume_cover = comicking_openapi.SetComicVolumeCover() # SetComicVolumeCover | 
 
     try:
         # Update volume comic cover.
-        api_response = api_instance.update_comic_volume_cover(comic_code, volume_number, ulid, set_comic_volume_cover)
+        api_response = api_instance.update_comic_volume_cover(comic_code, volume_number, image_ulid, set_comic_volume_cover)
         print("The response of ComicVolumeApi->update_comic_volume_cover:\n")
         pprint(api_response)
     except Exception as e:
@@ -1087,7 +1079,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **comic_code** | **str**|  | 
  **volume_number** | **str**|  | 
- **ulid** | **str**|  | 
+ **image_ulid** | **str**|  | 
  **set_comic_volume_cover** | [**SetComicVolumeCover**](SetComicVolumeCover.md)|  | 
 
 ### Return type

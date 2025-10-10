@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**person_code** | **str** |  | 
+**character_code** | **str** |  | 
 **is_main** | **bool** |  | [optional] 
 
 ## Example

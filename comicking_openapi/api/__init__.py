@@ -6,6 +6,7 @@ from comicking_openapi.api.character_api import CharacterApi
 from comicking_openapi.api.comic_api import ComicApi
 from comicking_openapi.api.comic_chapter_api import ComicChapterApi
 from comicking_openapi.api.comic_volume_api import ComicVolumeApi
+from comicking_openapi.api.image_api import ImageApi
 from comicking_openapi.api.language_api import LanguageApi
 from comicking_openapi.api.link_api import LinkApi
 from comicking_openapi.api.magazine_api import MagazineApi

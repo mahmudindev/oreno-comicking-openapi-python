@@ -6,11 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_at** | **datetime** |  | 
-**updated_at** | **datetime** |  | [optional] 
-**ulid** | **str** |  | 
-**link_website_host** | **str** |  | 
-**link_relative_reference** | **str** |  | [optional] 
-**hint** | **str** |  | [optional] 
+**updated_at** | **datetime** |  | 
+**image_ulid** | **str** |  | 
 
 ## Example
 

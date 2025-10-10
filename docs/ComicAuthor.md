@@ -6,10 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_at** | **datetime** |  | 
-**updated_at** | **datetime** |  | [optional] 
-**type_code** | **str** |  | 
+**updated_at** | **datetime** |  | 
+**position_code** | **str** |  | 
 **person_code** | **str** |  | 
-**note_count** | **int** |  | 
 
 ## Example
 

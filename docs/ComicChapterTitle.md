@@ -6,12 +6,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_at** | **datetime** |  | 
-**updated_at** | **datetime** |  | [optional] 
+**updated_at** | **datetime** |  | 
 **ulid** | **str** |  | 
 **language_lang** | **str** |  | 
 **content** | **str** |  | 
-**is_synonym** | **bool** |  | [optional] 
-**is_latinized** | **bool** |  | [optional] 
+**is_synonym** | **bool** |  | 
+**is_latinized** | **bool** |  | 
 
 ## Example
 

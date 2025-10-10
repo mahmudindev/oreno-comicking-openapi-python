@@ -6,14 +6,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_at** | **datetime** |  | 
-**updated_at** | **datetime** |  | [optional] 
+**updated_at** | **datetime** |  | 
 **code** | **str** |  | 
-**published_from** | **datetime** |  | [optional] 
-**published_to** | **datetime** |  | [optional] 
-**total_chapter** | **int** |  | [optional] 
-**total_volume** | **int** |  | [optional] 
-**nsfw** | **int** |  | [optional] 
-**nsfl** | **int** |  | [optional] 
+**published_from** | **datetime** |  | 
+**published_to** | **datetime** |  | 
+**total_chapter** | **int** |  | 
+**total_volume** | **int** |  | 
+**nsfw** | **int** |  | 
+**nsfl** | **int** |  | 
 **title_count** | **int** |  | 
 **cover_count** | **int** |  | 
 **synopsis_count** | **int** |  | 

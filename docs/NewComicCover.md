@@ -5,9 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**link_website_host** | **str** |  | 
-**link_relative_reference** | **str** |  | [optional] 
-**hint** | **str** |  | [optional] 
+**image_ulid** | **str** |  | 
 
 ## Example
 

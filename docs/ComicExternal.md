@@ -6,13 +6,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_at** | **datetime** |  | 
-**updated_at** | **datetime** |  | [optional] 
-**ulid** | **str** |  | 
+**updated_at** | **datetime** |  | 
 **link_website_host** | **str** |  | 
-**link_website_name** | **str** |  | 
-**link_relative_reference** | **str** |  | [optional] 
-**is_official** | **bool** |  | [optional] 
-**is_community** | **bool** |  | [optional] 
+**link_relative_reference** | **str** |  | 
+**is_official** | **bool** |  | 
+**is_community** | **bool** |  | 
 
 ## Example
 

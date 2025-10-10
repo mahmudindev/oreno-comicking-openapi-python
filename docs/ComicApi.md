@@ -6,8 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_comic**](ComicApi.md#add_comic) | **POST** /rest/comics | Add comic.
 [**add_comic_author**](ComicApi.md#add_comic_author) | **POST** /rest/comics/{comicCode}/authors | Add comic author.
-[**add_comic_author_note**](ComicApi.md#add_comic_author_note) | **POST** /rest/comics/{comicCode}/authors/{authorTypeCode}:{authorPersonCode}/notes | Add comic author note.
-[**add_comic_author_type**](ComicApi.md#add_comic_author_type) | **POST** /rest/comic-author-types | Add comic author type.
+[**add_comic_author_position**](ComicApi.md#add_comic_author_position) | **POST** /rest/comic-author-positions | Add comic author position.
 [**add_comic_category**](ComicApi.md#add_comic_category) | **POST** /rest/comics/{comicCode}/categories | Add comic category.
 [**add_comic_character**](ComicApi.md#add_comic_character) | **POST** /rest/comics/{comicCode}/characters | Add comic character.
 [**add_comic_cover**](ComicApi.md#add_comic_cover) | **POST** /rest/comics/{comicCode}/covers | Add comic cover.
@@ -19,13 +18,12 @@ Method | HTTP request | Description
 [**add_comic_tag**](ComicApi.md#add_comic_tag) | **POST** /rest/comics/{comicCode}/tags | Add comic tag.
 [**add_comic_title**](ComicApi.md#add_comic_title) | **POST** /rest/comics/{comicCode}/titles | Add comic title.
 [**delete_comic**](ComicApi.md#delete_comic) | **DELETE** /rest/comics/{code} | Delete comic.
-[**delete_comic_author**](ComicApi.md#delete_comic_author) | **DELETE** /rest/comics/{comicCode}/authors/{typeCode}:{personCode} | Delete comic author.
-[**delete_comic_author_note**](ComicApi.md#delete_comic_author_note) | **DELETE** /rest/comics/{comicCode}/authors/{authorTypeCode}:{authorPersonCode}/notes/{ulid} | Delete comic author note.
-[**delete_comic_author_type**](ComicApi.md#delete_comic_author_type) | **DELETE** /rest/comic-author-types/{code} | Delete comic author type.
+[**delete_comic_author**](ComicApi.md#delete_comic_author) | **DELETE** /rest/comics/{comicCode}/authors/{positionCode}:{personCode} | Delete comic author.
+[**delete_comic_author_position**](ComicApi.md#delete_comic_author_position) | **DELETE** /rest/comic-author-positions/{code} | Delete comic author position.
 [**delete_comic_category**](ComicApi.md#delete_comic_category) | **DELETE** /rest/comics/{comicCode}/categories/{categoryTypeCode}:{categoryCode} | Delete comic category.
 [**delete_comic_character**](ComicApi.md#delete_comic_character) | **DELETE** /rest/comics/{comicCode}/characters/{characterCode} | Delete comic character.
-[**delete_comic_cover**](ComicApi.md#delete_comic_cover) | **DELETE** /rest/comics/{comicCode}/covers/{ulid} | Delete comic cover.
-[**delete_comic_external**](ComicApi.md#delete_comic_external) | **DELETE** /rest/comics/{comicCode}/externals/{ulid} | Delete comic external.
+[**delete_comic_cover**](ComicApi.md#delete_comic_cover) | **DELETE** /rest/comics/{comicCode}/covers/{imageULID} | Delete comic cover.
+[**delete_comic_external**](ComicApi.md#delete_comic_external) | **DELETE** /rest/comics/{comicCode}/externals/{linkHREF} | Delete comic external.
 [**delete_comic_relation**](ComicApi.md#delete_comic_relation) | **DELETE** /rest/comics/{comicCode}/relations/{typeCode}:{childCode} | Delete comic relation.
 [**delete_comic_relation_type**](ComicApi.md#delete_comic_relation_type) | **DELETE** /rest/comic-relation-types/{code} | Delete comic relation type.
 [**delete_comic_serialization**](ComicApi.md#delete_comic_serialization) | **DELETE** /rest/comics/{comicCode}/serializations/{magazineCode} | Delete comic serialization.
@@ -33,13 +31,12 @@ Method | HTTP request | Description
 [**delete_comic_tag**](ComicApi.md#delete_comic_tag) | **DELETE** /rest/comics/{comicCode}/tags/{tagTypeCode}:{tagCode} | Delete comic tag.
 [**delete_comic_title**](ComicApi.md#delete_comic_title) | **DELETE** /rest/comics/{comicCode}/titles/{ulid} | Delete comic title.
 [**get_comic**](ComicApi.md#get_comic) | **GET** /rest/comics/{code} | Get comic.
-[**get_comic_author**](ComicApi.md#get_comic_author) | **GET** /rest/comics/{comicCode}/authors/{typeCode}:{personCode} | Get comic author.
-[**get_comic_author_note**](ComicApi.md#get_comic_author_note) | **GET** /rest/comics/{comicCode}/authors/{authorTypeCode}:{authorPersonCode}/notes/{ulid} | Get comic author note.
-[**get_comic_author_type**](ComicApi.md#get_comic_author_type) | **GET** /rest/comic-author-types/{code} | Get comic author type.
+[**get_comic_author**](ComicApi.md#get_comic_author) | **GET** /rest/comics/{comicCode}/authors/{positionCode}:{personCode} | Get comic author.
+[**get_comic_author_position**](ComicApi.md#get_comic_author_position) | **GET** /rest/comic-author-positions/{code} | Get comic author position.
 [**get_comic_category**](ComicApi.md#get_comic_category) | **GET** /rest/comics/{comicCode}/categories/{categoryTypeCode}:{categoryCode} | Get comic category.
 [**get_comic_character**](ComicApi.md#get_comic_character) | **GET** /rest/comics/{comicCode}/characters/{characterCode} | Get comic character.
-[**get_comic_cover**](ComicApi.md#get_comic_cover) | **GET** /rest/comics/{comicCode}/covers/{ulid} | Get comic cover.
-[**get_comic_external**](ComicApi.md#get_comic_external) | **GET** /rest/comics/{comicCode}/externals/{ulid} | Get comic external.
+[**get_comic_cover**](ComicApi.md#get_comic_cover) | **GET** /rest/comics/{comicCode}/covers/{imageULID} | Get comic cover.
+[**get_comic_external**](ComicApi.md#get_comic_external) | **GET** /rest/comics/{comicCode}/externals/{linkHREF} | Get comic external.
 [**get_comic_relation**](ComicApi.md#get_comic_relation) | **GET** /rest/comics/{comicCode}/relations/{typeCode}:{childCode} | Get comic relation.
 [**get_comic_relation_type**](ComicApi.md#get_comic_relation_type) | **GET** /rest/comic-relation-types/{code} | Get comic relation type.
 [**get_comic_serialization**](ComicApi.md#get_comic_serialization) | **GET** /rest/comics/{comicCode}/serializations/{magazineCode} | Get comic serialization.
@@ -48,8 +45,7 @@ Method | HTTP request | Description
 [**get_comic_title**](ComicApi.md#get_comic_title) | **GET** /rest/comics/{comicCode}/titles/{ulid} | Get comic title.
 [**list_comic**](ComicApi.md#list_comic) | **GET** /rest/comics | List comic.
 [**list_comic_author**](ComicApi.md#list_comic_author) | **GET** /rest/comics/{comicCode}/authors | List comic author.
-[**list_comic_author_note**](ComicApi.md#list_comic_author_note) | **GET** /rest/comics/{comicCode}/authors/{authorTypeCode}:{authorPersonCode}/notes | List comic author note.
-[**list_comic_author_type**](ComicApi.md#list_comic_author_type) | **GET** /rest/comic-author-types | List comic author type.
+[**list_comic_author_position**](ComicApi.md#list_comic_author_position) | **GET** /rest/comic-author-positions | List comic author position.
 [**list_comic_category**](ComicApi.md#list_comic_category) | **GET** /rest/comics/{comicCode}/categories | List comic category.
 [**list_comic_character**](ComicApi.md#list_comic_character) | **GET** /rest/comics/{comicCode}/characters | List comic character.
 [**list_comic_cover**](ComicApi.md#list_comic_cover) | **GET** /rest/comics/{comicCode}/covers | List comic cover.
@@ -61,13 +57,12 @@ Method | HTTP request | Description
 [**list_comic_tag**](ComicApi.md#list_comic_tag) | **GET** /rest/comics/{comicCode}/tags | List comic tag.
 [**list_comic_title**](ComicApi.md#list_comic_title) | **GET** /rest/comics/{comicCode}/titles | List comic title.
 [**update_comic**](ComicApi.md#update_comic) | **PATCH** /rest/comics/{code} | Update comic.
-[**update_comic_author**](ComicApi.md#update_comic_author) | **PATCH** /rest/comics/{comicCode}/authors/{typeCode}:{personCode} | Update comic author.
-[**update_comic_author_note**](ComicApi.md#update_comic_author_note) | **PATCH** /rest/comics/{comicCode}/authors/{authorTypeCode}:{authorPersonCode}/notes/{ulid} | Update comic author note.
-[**update_comic_author_type**](ComicApi.md#update_comic_author_type) | **PATCH** /rest/comic-author-types/{code} | Update comic author type.
+[**update_comic_author**](ComicApi.md#update_comic_author) | **PATCH** /rest/comics/{comicCode}/authors/{positionCode}:{personCode} | Update comic author.
+[**update_comic_author_position**](ComicApi.md#update_comic_author_position) | **PATCH** /rest/comic-author-positions/{code} | Update comic author position.
 [**update_comic_category**](ComicApi.md#update_comic_category) | **PATCH** /rest/comics/{comicCode}/categories/{categoryTypeCode}:{categoryCode} | Update comic category.
 [**update_comic_character**](ComicApi.md#update_comic_character) | **PATCH** /rest/comics/{comicCode}/characters/{characterCode} | Update comic character.
-[**update_comic_cover**](ComicApi.md#update_comic_cover) | **PATCH** /rest/comics/{comicCode}/covers/{ulid} | Update comic cover.
-[**update_comic_external**](ComicApi.md#update_comic_external) | **PATCH** /rest/comics/{comicCode}/externals/{ulid} | Update comic external.
+[**update_comic_cover**](ComicApi.md#update_comic_cover) | **PATCH** /rest/comics/{comicCode}/covers/{imageULID} | Update comic cover.
+[**update_comic_external**](ComicApi.md#update_comic_external) | **PATCH** /rest/comics/{comicCode}/externals/{linkHREF} | Update comic external.
 [**update_comic_relation**](ComicApi.md#update_comic_relation) | **PATCH** /rest/comics/{comicCode}/relations/{typeCode}:{childCode} | Update comic relation.
 [**update_comic_relation_type**](ComicApi.md#update_comic_relation_type) | **PATCH** /rest/comic-relation-types/{code} | Update comic relation type.
 [**update_comic_serialization**](ComicApi.md#update_comic_serialization) | **PATCH** /rest/comics/{comicCode}/serializations/{magazineCode} | Update comic serialization.
@@ -234,94 +229,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **add_comic_author_note**
-> ComicAuthorNote add_comic_author_note(comic_code, author_type_code, author_person_code, new_comic_author_note)
+# **add_comic_author_position**
+> GenericType add_comic_author_position(new_generic_type)
 
-Add comic author note.
-
-### Example
-
-* Bearer (JWT) Authentication (BearerAuth):
-
-```python
-import comicking_openapi
-from comicking_openapi.models.comic_author_note import ComicAuthorNote
-from comicking_openapi.models.new_comic_author_note import NewComicAuthorNote
-from comicking_openapi.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to /api
-# See configuration.py for a list of all supported configuration parameters.
-configuration = comicking_openapi.Configuration(
-    host = "/api"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure Bearer authorization (JWT): BearerAuth
-configuration = comicking_openapi.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
-
-# Enter a context with an instance of the API client
-with comicking_openapi.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = comicking_openapi.ComicApi(api_client)
-    comic_code = 'comic_code_example' # str | 
-    author_type_code = 'author_type_code_example' # str | 
-    author_person_code = 'author_person_code_example' # str | 
-    new_comic_author_note = comicking_openapi.NewComicAuthorNote() # NewComicAuthorNote | 
-
-    try:
-        # Add comic author note.
-        api_response = api_instance.add_comic_author_note(comic_code, author_type_code, author_person_code, new_comic_author_note)
-        print("The response of ComicApi->add_comic_author_note:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling ComicApi->add_comic_author_note: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **comic_code** | **str**|  | 
- **author_type_code** | **str**|  | 
- **author_person_code** | **str**|  | 
- **new_comic_author_note** | [**NewComicAuthorNote**](NewComicAuthorNote.md)|  | 
-
-### Return type
-
-[**ComicAuthorNote**](ComicAuthorNote.md)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**201** | Comic author note added. |  * Location -  <br>  |
-**0** | Unexpected error. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **add_comic_author_type**
-> GenericType add_comic_author_type(new_generic_type)
-
-Add comic author type.
+Add comic author position.
 
 ### Example
 
@@ -357,12 +268,12 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     new_generic_type = comicking_openapi.NewGenericType() # NewGenericType | 
 
     try:
-        # Add comic author type.
-        api_response = api_instance.add_comic_author_type(new_generic_type)
-        print("The response of ComicApi->add_comic_author_type:\n")
+        # Add comic author position.
+        api_response = api_instance.add_comic_author_position(new_generic_type)
+        print("The response of ComicApi->add_comic_author_position:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling ComicApi->add_comic_author_type: %s\n" % e)
+        print("Exception when calling ComicApi->add_comic_author_position: %s\n" % e)
 ```
 
 
@@ -391,7 +302,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | Comic author type added. |  * Location -  <br>  |
+**201** | Comic author position added. |  * Location -  <br>  |
 **0** | Unexpected error. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1269,7 +1180,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_comic_author**
-> delete_comic_author(comic_code, type_code, person_code)
+> delete_comic_author(comic_code, position_code, person_code)
 
 Delete comic author.
 
@@ -1303,12 +1214,12 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comicking_openapi.ComicApi(api_client)
     comic_code = 'comic_code_example' # str | 
-    type_code = 'type_code_example' # str | 
+    position_code = 'position_code_example' # str | 
     person_code = 'person_code_example' # str | 
 
     try:
         # Delete comic author.
-        api_instance.delete_comic_author(comic_code, type_code, person_code)
+        api_instance.delete_comic_author(comic_code, position_code, person_code)
     except Exception as e:
         print("Exception when calling ComicApi->delete_comic_author: %s\n" % e)
 ```
@@ -1321,7 +1232,7 @@ with comicking_openapi.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **comic_code** | **str**|  | 
- **type_code** | **str**|  | 
+ **position_code** | **str**|  | 
  **person_code** | **str**|  | 
 
 ### Return type
@@ -1346,90 +1257,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_comic_author_note**
-> delete_comic_author_note(comic_code, author_type_code, author_person_code, ulid)
+# **delete_comic_author_position**
+> delete_comic_author_position(code)
 
-Delete comic author note.
-
-### Example
-
-* Bearer (JWT) Authentication (BearerAuth):
-
-```python
-import comicking_openapi
-from comicking_openapi.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to /api
-# See configuration.py for a list of all supported configuration parameters.
-configuration = comicking_openapi.Configuration(
-    host = "/api"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure Bearer authorization (JWT): BearerAuth
-configuration = comicking_openapi.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
-
-# Enter a context with an instance of the API client
-with comicking_openapi.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = comicking_openapi.ComicApi(api_client)
-    comic_code = 'comic_code_example' # str | 
-    author_type_code = 'author_type_code_example' # str | 
-    author_person_code = 'author_person_code_example' # str | 
-    ulid = 'ulid_example' # str | 
-
-    try:
-        # Delete comic author note.
-        api_instance.delete_comic_author_note(comic_code, author_type_code, author_person_code, ulid)
-    except Exception as e:
-        print("Exception when calling ComicApi->delete_comic_author_note: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **comic_code** | **str**|  | 
- **author_type_code** | **str**|  | 
- **author_person_code** | **str**|  | 
- **ulid** | **str**|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**204** | Comic author note deleted. |  -  |
-**0** | Unexpected error. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **delete_comic_author_type**
-> delete_comic_author_type(code)
-
-Delete comic author type.
+Delete comic author position.
 
 ### Example
 
@@ -1463,10 +1294,10 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     code = 'code_example' # str | 
 
     try:
-        # Delete comic author type.
-        api_instance.delete_comic_author_type(code)
+        # Delete comic author position.
+        api_instance.delete_comic_author_position(code)
     except Exception as e:
-        print("Exception when calling ComicApi->delete_comic_author_type: %s\n" % e)
+        print("Exception when calling ComicApi->delete_comic_author_position: %s\n" % e)
 ```
 
 
@@ -1495,7 +1326,7 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**204** | Comic author type deleted. |  -  |
+**204** | Comic author position deleted. |  -  |
 **0** | Unexpected error. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1655,7 +1486,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_comic_cover**
-> delete_comic_cover(comic_code, ulid)
+> delete_comic_cover(comic_code, image_ulid)
 
 Delete comic cover.
 
@@ -1689,11 +1520,11 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comicking_openapi.ComicApi(api_client)
     comic_code = 'comic_code_example' # str | 
-    ulid = 'ulid_example' # str | 
+    image_ulid = 'image_ulid_example' # str | 
 
     try:
         # Delete comic cover.
-        api_instance.delete_comic_cover(comic_code, ulid)
+        api_instance.delete_comic_cover(comic_code, image_ulid)
     except Exception as e:
         print("Exception when calling ComicApi->delete_comic_cover: %s\n" % e)
 ```
@@ -1706,7 +1537,7 @@ with comicking_openapi.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **comic_code** | **str**|  | 
- **ulid** | **str**|  | 
+ **image_ulid** | **str**|  | 
 
 ### Return type
 
@@ -1731,7 +1562,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_comic_external**
-> delete_comic_external(comic_code, ulid)
+> delete_comic_external(comic_code, link_href)
 
 Delete comic external.
 
@@ -1765,11 +1596,11 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comicking_openapi.ComicApi(api_client)
     comic_code = 'comic_code_example' # str | 
-    ulid = 'ulid_example' # str | 
+    link_href = 'link_href_example' # str | 
 
     try:
         # Delete comic external.
-        api_instance.delete_comic_external(comic_code, ulid)
+        api_instance.delete_comic_external(comic_code, link_href)
     except Exception as e:
         print("Exception when calling ComicApi->delete_comic_external: %s\n" % e)
 ```
@@ -1782,7 +1613,7 @@ with comicking_openapi.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **comic_code** | **str**|  | 
- **ulid** | **str**|  | 
+ **link_href** | **str**|  | 
 
 ### Return type
 
@@ -2332,7 +2163,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_comic_author**
-> ComicAuthor get_comic_author(comic_code, type_code, person_code)
+> ComicAuthor get_comic_author(comic_code, position_code, person_code)
 
 Get comic author.
 
@@ -2357,12 +2188,12 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comicking_openapi.ComicApi(api_client)
     comic_code = 'comic_code_example' # str | 
-    type_code = 'type_code_example' # str | 
+    position_code = 'position_code_example' # str | 
     person_code = 'person_code_example' # str | 
 
     try:
         # Get comic author.
-        api_response = api_instance.get_comic_author(comic_code, type_code, person_code)
+        api_response = api_instance.get_comic_author(comic_code, position_code, person_code)
         print("The response of ComicApi->get_comic_author:\n")
         pprint(api_response)
     except Exception as e:
@@ -2377,7 +2208,7 @@ with comicking_openapi.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **comic_code** | **str**|  | 
- **type_code** | **str**|  | 
+ **position_code** | **str**|  | 
  **person_code** | **str**|  | 
 
 ### Return type
@@ -2402,83 +2233,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_comic_author_note**
-> ComicAuthorNote get_comic_author_note(comic_code, author_type_code, author_person_code, ulid)
+# **get_comic_author_position**
+> GenericType get_comic_author_position(code)
 
-Get comic author note.
-
-### Example
-
-
-```python
-import comicking_openapi
-from comicking_openapi.models.comic_author_note import ComicAuthorNote
-from comicking_openapi.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to /api
-# See configuration.py for a list of all supported configuration parameters.
-configuration = comicking_openapi.Configuration(
-    host = "/api"
-)
-
-
-# Enter a context with an instance of the API client
-with comicking_openapi.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = comicking_openapi.ComicApi(api_client)
-    comic_code = 'comic_code_example' # str | 
-    author_type_code = 'author_type_code_example' # str | 
-    author_person_code = 'author_person_code_example' # str | 
-    ulid = 'ulid_example' # str | 
-
-    try:
-        # Get comic author note.
-        api_response = api_instance.get_comic_author_note(comic_code, author_type_code, author_person_code, ulid)
-        print("The response of ComicApi->get_comic_author_note:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling ComicApi->get_comic_author_note: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **comic_code** | **str**|  | 
- **author_type_code** | **str**|  | 
- **author_person_code** | **str**|  | 
- **ulid** | **str**|  | 
-
-### Return type
-
-[**ComicAuthorNote**](ComicAuthorNote.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Comic author note gets. |  -  |
-**0** | Unexpected error. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_comic_author_type**
-> GenericType get_comic_author_type(code)
-
-Get comic author type.
+Get comic author position.
 
 ### Example
 
@@ -2503,12 +2261,12 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     code = 'code_example' # str | 
 
     try:
-        # Get comic author type.
-        api_response = api_instance.get_comic_author_type(code)
-        print("The response of ComicApi->get_comic_author_type:\n")
+        # Get comic author position.
+        api_response = api_instance.get_comic_author_position(code)
+        print("The response of ComicApi->get_comic_author_position:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling ComicApi->get_comic_author_type: %s\n" % e)
+        print("Exception when calling ComicApi->get_comic_author_position: %s\n" % e)
 ```
 
 
@@ -2537,7 +2295,7 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Comic author type gets. |  -  |
+**200** | Comic author position gets. |  -  |
 **0** | Unexpected error. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -2683,7 +2441,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_comic_cover**
-> ComicCover get_comic_cover(comic_code, ulid)
+> ComicCover get_comic_cover(comic_code, image_ulid)
 
 Get comic cover.
 
@@ -2708,11 +2466,11 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comicking_openapi.ComicApi(api_client)
     comic_code = 'comic_code_example' # str | 
-    ulid = 'ulid_example' # str | 
+    image_ulid = 'image_ulid_example' # str | 
 
     try:
         # Get comic cover.
-        api_response = api_instance.get_comic_cover(comic_code, ulid)
+        api_response = api_instance.get_comic_cover(comic_code, image_ulid)
         print("The response of ComicApi->get_comic_cover:\n")
         pprint(api_response)
     except Exception as e:
@@ -2727,7 +2485,7 @@ with comicking_openapi.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **comic_code** | **str**|  | 
- **ulid** | **str**|  | 
+ **image_ulid** | **str**|  | 
 
 ### Return type
 
@@ -2752,7 +2510,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_comic_external**
-> ComicExternal get_comic_external(comic_code, ulid)
+> ComicExternal get_comic_external(comic_code, link_href)
 
 Get comic external.
 
@@ -2777,11 +2535,11 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comicking_openapi.ComicApi(api_client)
     comic_code = 'comic_code_example' # str | 
-    ulid = 'ulid_example' # str | 
+    link_href = 'link_href_example' # str | 
 
     try:
         # Get comic external.
-        api_response = api_instance.get_comic_external(comic_code, ulid)
+        api_response = api_instance.get_comic_external(comic_code, link_href)
         print("The response of ComicApi->get_comic_external:\n")
         pprint(api_response)
     except Exception as e:
@@ -2796,7 +2554,7 @@ with comicking_openapi.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **comic_code** | **str**|  | 
- **ulid** | **str**|  | 
+ **link_href** | **str**|  | 
 
 ### Return type
 
@@ -3237,7 +2995,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_comic**
-> List[Comic] list_comic(page=page, limit=limit, order=order, order_by=order_by, external=external)
+> List[Comic] list_comic(page=page, limit=limit, order=order, order_by=order_by, external_link_website_host=external_link_website_host, external_link_relative_reference=external_link_relative_reference, external_link_href=external_link_href)
 
 List comic.
 
@@ -3265,11 +3023,13 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     limit = 56 # int |  (optional)
     order = 'order_example' # str |  (optional)
     order_by = ['order_by_example'] # List[str] |  (optional)
-    external = ['external_example'] # List[str] |  (optional)
+    external_link_website_host = ['external_link_website_host_example'] # List[str] |  (optional)
+    external_link_relative_reference = ['external_link_relative_reference_example'] # List[str] |  (optional)
+    external_link_href = ['external_link_href_example'] # List[str] |  (optional)
 
     try:
         # List comic.
-        api_response = api_instance.list_comic(page=page, limit=limit, order=order, order_by=order_by, external=external)
+        api_response = api_instance.list_comic(page=page, limit=limit, order=order, order_by=order_by, external_link_website_host=external_link_website_host, external_link_relative_reference=external_link_relative_reference, external_link_href=external_link_href)
         print("The response of ComicApi->list_comic:\n")
         pprint(api_response)
     except Exception as e:
@@ -3287,7 +3047,9 @@ Name | Type | Description  | Notes
  **limit** | **int**|  | [optional] 
  **order** | **str**|  | [optional] 
  **order_by** | [**List[str]**](str.md)|  | [optional] 
- **external** | [**List[str]**](str.md)|  | [optional] 
+ **external_link_website_host** | [**List[str]**](str.md)|  | [optional] 
+ **external_link_relative_reference** | [**List[str]**](str.md)|  | [optional] 
+ **external_link_href** | [**List[str]**](str.md)|  | [optional] 
 
 ### Return type
 
@@ -3388,89 +3150,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_comic_author_note**
-> List[ComicAuthorNote] list_comic_author_note(comic_code, author_type_code, author_person_code, page=page, limit=limit, order=order, order_by=order_by)
+# **list_comic_author_position**
+> List[GenericType] list_comic_author_position(page=page, limit=limit, order=order, order_by=order_by)
 
-List comic author note.
-
-### Example
-
-
-```python
-import comicking_openapi
-from comicking_openapi.models.comic_author_note import ComicAuthorNote
-from comicking_openapi.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to /api
-# See configuration.py for a list of all supported configuration parameters.
-configuration = comicking_openapi.Configuration(
-    host = "/api"
-)
-
-
-# Enter a context with an instance of the API client
-with comicking_openapi.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = comicking_openapi.ComicApi(api_client)
-    comic_code = 'comic_code_example' # str | 
-    author_type_code = 'author_type_code_example' # str | 
-    author_person_code = 'author_person_code_example' # str | 
-    page = 56 # int |  (optional)
-    limit = 56 # int |  (optional)
-    order = 'order_example' # str |  (optional)
-    order_by = ['order_by_example'] # List[str] |  (optional)
-
-    try:
-        # List comic author note.
-        api_response = api_instance.list_comic_author_note(comic_code, author_type_code, author_person_code, page=page, limit=limit, order=order, order_by=order_by)
-        print("The response of ComicApi->list_comic_author_note:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling ComicApi->list_comic_author_note: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **comic_code** | **str**|  | 
- **author_type_code** | **str**|  | 
- **author_person_code** | **str**|  | 
- **page** | **int**|  | [optional] 
- **limit** | **int**|  | [optional] 
- **order** | **str**|  | [optional] 
- **order_by** | [**List[str]**](str.md)|  | [optional] 
-
-### Return type
-
-[**List[ComicAuthorNote]**](ComicAuthorNote.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Comic author note list. |  * X-Total-Count -  <br>  * X-Pagination-Limit -  <br>  |
-**0** | Unexpected error. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **list_comic_author_type**
-> List[GenericType] list_comic_author_type(page=page, limit=limit, order=order, order_by=order_by)
-
-List comic author type.
+List comic author position.
 
 ### Example
 
@@ -3498,12 +3181,12 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     order_by = ['order_by_example'] # List[str] |  (optional)
 
     try:
-        # List comic author type.
-        api_response = api_instance.list_comic_author_type(page=page, limit=limit, order=order, order_by=order_by)
-        print("The response of ComicApi->list_comic_author_type:\n")
+        # List comic author position.
+        api_response = api_instance.list_comic_author_position(page=page, limit=limit, order=order, order_by=order_by)
+        print("The response of ComicApi->list_comic_author_position:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling ComicApi->list_comic_author_type: %s\n" % e)
+        print("Exception when calling ComicApi->list_comic_author_position: %s\n" % e)
 ```
 
 
@@ -3535,7 +3218,7 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Comic author type list. |  * X-Total-Count -  <br>  * X-Pagination-Limit -  <br>  |
+**200** | Comic author position list. |  * X-Total-Count -  <br>  * X-Pagination-Limit -  <br>  |
 **0** | Unexpected error. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3693,7 +3376,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_comic_cover**
-> List[ComicCover] list_comic_cover(comic_code, page=page, limit=limit, order=order, order_by=order_by, link_website_host=link_website_host, link_relative_reference=link_relative_reference, link_href=link_href)
+> List[ComicCover] list_comic_cover(comic_code, page=page, limit=limit, order=order, order_by=order_by)
 
 List comic cover.
 
@@ -3722,13 +3405,10 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     limit = 56 # int |  (optional)
     order = 'order_example' # str |  (optional)
     order_by = ['order_by_example'] # List[str] |  (optional)
-    link_website_host = ['link_website_host_example'] # List[str] |  (optional)
-    link_relative_reference = ['link_relative_reference_example'] # List[str] |  (optional)
-    link_href = ['link_href_example'] # List[str] |  (optional)
 
     try:
         # List comic cover.
-        api_response = api_instance.list_comic_cover(comic_code, page=page, limit=limit, order=order, order_by=order_by, link_website_host=link_website_host, link_relative_reference=link_relative_reference, link_href=link_href)
+        api_response = api_instance.list_comic_cover(comic_code, page=page, limit=limit, order=order, order_by=order_by)
         print("The response of ComicApi->list_comic_cover:\n")
         pprint(api_response)
     except Exception as e:
@@ -3747,9 +3427,6 @@ Name | Type | Description  | Notes
  **limit** | **int**|  | [optional] 
  **order** | **str**|  | [optional] 
  **order_by** | [**List[str]**](str.md)|  | [optional] 
- **link_website_host** | [**List[str]**](str.md)|  | [optional] 
- **link_relative_reference** | [**List[str]**](str.md)|  | [optional] 
- **link_href** | [**List[str]**](str.md)|  | [optional] 
 
 ### Return type
 
@@ -4388,7 +4065,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_comic_author**
-> ComicAuthor update_comic_author(comic_code, type_code, person_code, set_comic_author)
+> ComicAuthor update_comic_author(comic_code, position_code, person_code, set_comic_author)
 
 Update comic author.
 
@@ -4424,13 +4101,13 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comicking_openapi.ComicApi(api_client)
     comic_code = 'comic_code_example' # str | 
-    type_code = 'type_code_example' # str | 
+    position_code = 'position_code_example' # str | 
     person_code = 'person_code_example' # str | 
     set_comic_author = comicking_openapi.SetComicAuthor() # SetComicAuthor | 
 
     try:
         # Update comic author.
-        api_response = api_instance.update_comic_author(comic_code, type_code, person_code, set_comic_author)
+        api_response = api_instance.update_comic_author(comic_code, position_code, person_code, set_comic_author)
         print("The response of ComicApi->update_comic_author:\n")
         pprint(api_response)
     except Exception as e:
@@ -4445,7 +4122,7 @@ with comicking_openapi.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **comic_code** | **str**|  | 
- **type_code** | **str**|  | 
+ **position_code** | **str**|  | 
  **person_code** | **str**|  | 
  **set_comic_author** | [**SetComicAuthor**](SetComicAuthor.md)|  | 
 
@@ -4472,97 +4149,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_comic_author_note**
-> ComicAuthorNote update_comic_author_note(comic_code, author_type_code, author_person_code, ulid, set_comic_author_note)
+# **update_comic_author_position**
+> GenericType update_comic_author_position(code, set_generic_type)
 
-Update comic author note.
-
-### Example
-
-* Bearer (JWT) Authentication (BearerAuth):
-
-```python
-import comicking_openapi
-from comicking_openapi.models.comic_author_note import ComicAuthorNote
-from comicking_openapi.models.set_comic_author_note import SetComicAuthorNote
-from comicking_openapi.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to /api
-# See configuration.py for a list of all supported configuration parameters.
-configuration = comicking_openapi.Configuration(
-    host = "/api"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure Bearer authorization (JWT): BearerAuth
-configuration = comicking_openapi.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
-
-# Enter a context with an instance of the API client
-with comicking_openapi.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = comicking_openapi.ComicApi(api_client)
-    comic_code = 'comic_code_example' # str | 
-    author_type_code = 'author_type_code_example' # str | 
-    author_person_code = 'author_person_code_example' # str | 
-    ulid = 'ulid_example' # str | 
-    set_comic_author_note = comicking_openapi.SetComicAuthorNote() # SetComicAuthorNote | 
-
-    try:
-        # Update comic author note.
-        api_response = api_instance.update_comic_author_note(comic_code, author_type_code, author_person_code, ulid, set_comic_author_note)
-        print("The response of ComicApi->update_comic_author_note:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling ComicApi->update_comic_author_note: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **comic_code** | **str**|  | 
- **author_type_code** | **str**|  | 
- **author_person_code** | **str**|  | 
- **ulid** | **str**|  | 
- **set_comic_author_note** | [**SetComicAuthorNote**](SetComicAuthorNote.md)|  | 
-
-### Return type
-
-[**ComicAuthorNote**](ComicAuthorNote.md)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Comic author note updated. |  * Location -  <br>  |
-**204** | Comic author note unmodified. |  -  |
-**0** | Unexpected error. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **update_comic_author_type**
-> GenericType update_comic_author_type(code, set_generic_type)
-
-Update comic author type.
+Update comic author position.
 
 ### Example
 
@@ -4599,12 +4189,12 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     set_generic_type = comicking_openapi.SetGenericType() # SetGenericType | 
 
     try:
-        # Update comic author type.
-        api_response = api_instance.update_comic_author_type(code, set_generic_type)
-        print("The response of ComicApi->update_comic_author_type:\n")
+        # Update comic author position.
+        api_response = api_instance.update_comic_author_position(code, set_generic_type)
+        print("The response of ComicApi->update_comic_author_position:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling ComicApi->update_comic_author_type: %s\n" % e)
+        print("Exception when calling ComicApi->update_comic_author_position: %s\n" % e)
 ```
 
 
@@ -4634,8 +4224,8 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Comic author type updated. |  * Location -  <br>  |
-**204** | Comic author type unmodified. |  -  |
+**200** | Comic author position updated. |  * Location -  <br>  |
+**204** | Comic author position unmodified. |  -  |
 **0** | Unexpected error. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -4809,7 +4399,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_comic_cover**
-> ComicCover update_comic_cover(comic_code, ulid, set_comic_cover)
+> ComicCover update_comic_cover(comic_code, image_ulid, set_comic_cover)
 
 Update comic cover.
 
@@ -4845,12 +4435,12 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comicking_openapi.ComicApi(api_client)
     comic_code = 'comic_code_example' # str | 
-    ulid = 'ulid_example' # str | 
+    image_ulid = 'image_ulid_example' # str | 
     set_comic_cover = comicking_openapi.SetComicCover() # SetComicCover | 
 
     try:
         # Update comic cover.
-        api_response = api_instance.update_comic_cover(comic_code, ulid, set_comic_cover)
+        api_response = api_instance.update_comic_cover(comic_code, image_ulid, set_comic_cover)
         print("The response of ComicApi->update_comic_cover:\n")
         pprint(api_response)
     except Exception as e:
@@ -4865,7 +4455,7 @@ with comicking_openapi.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **comic_code** | **str**|  | 
- **ulid** | **str**|  | 
+ **image_ulid** | **str**|  | 
  **set_comic_cover** | [**SetComicCover**](SetComicCover.md)|  | 
 
 ### Return type
@@ -4892,7 +4482,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_comic_external**
-> ComicExternal update_comic_external(comic_code, ulid, set_comic_external)
+> ComicExternal update_comic_external(comic_code, link_href, set_comic_external)
 
 Update comic external.
 
@@ -4928,12 +4518,12 @@ with comicking_openapi.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = comicking_openapi.ComicApi(api_client)
     comic_code = 'comic_code_example' # str | 
-    ulid = 'ulid_example' # str | 
+    link_href = 'link_href_example' # str | 
     set_comic_external = comicking_openapi.SetComicExternal() # SetComicExternal | 
 
     try:
         # Update comic external.
-        api_response = api_instance.update_comic_external(comic_code, ulid, set_comic_external)
+        api_response = api_instance.update_comic_external(comic_code, link_href, set_comic_external)
         print("The response of ComicApi->update_comic_external:\n")
         pprint(api_response)
     except Exception as e:
@@ -4948,7 +4538,7 @@ with comicking_openapi.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **comic_code** | **str**|  | 
- **ulid** | **str**|  | 
+ **link_href** | **str**|  | 
  **set_comic_external** | [**SetComicExternal**](SetComicExternal.md)|  | 
 
 ### Return type

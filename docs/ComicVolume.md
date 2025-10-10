@@ -6,9 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_at** | **datetime** |  | 
-**updated_at** | **datetime** |  | [optional] 
+**updated_at** | **datetime** |  | 
 **number** | **float** |  | 
-**released_at** | **datetime** |  | [optional] 
+**released_at** | **datetime** |  | 
 **title_count** | **str** |  | 
 **cover_count** | **str** |  | 
 **chapter_count** | **str** |  | 

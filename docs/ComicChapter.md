@@ -6,13 +6,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_at** | **datetime** |  | 
-**updated_at** | **datetime** |  | [optional] 
+**updated_at** | **datetime** |  | 
 **number** | **float** |  | 
-**version** | **str** |  | [optional] 
-**released_at** | **datetime** |  | [optional] 
-**thumbnail_link_website_host** | **str** |  | [optional] 
-**thumbnail_link_relative_reference** | **str** |  | [optional] 
-**volume_number** | **str** |  | [optional] 
+**version** | **str** |  | 
+**released_at** | **datetime** |  | 
+**volume_number** | **str** |  | 
 **title_count** | **int** |  | 
 
 ## Example
